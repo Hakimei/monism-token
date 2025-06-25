@@ -1102,7 +1102,7 @@
     "H1": {
       "family": {
         "type": "string",
-        "value": "{00. Global Typography.font.family.sans-display}",
+        "value": "{00. Global Typography.font.family.sans-1}",
         "description": "font display family",
         "scopes": [
           "FONT_FAMILY"
@@ -22676,7 +22676,7 @@
         ".01. Base Shadow",
         ".01. Base Stroke"
       ],
-      "createdAt": "2025-06-25T08:49:59.477Z"
+      "createdAt": "2025-06-25T08:52:13.400Z"
     }
   }
 }
