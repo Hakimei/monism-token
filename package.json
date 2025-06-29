@@ -16,6 +16,6 @@
   "author": "Your Name",
   "license": "MIT",
   "devDependencies": {
-    "style-dictionary": "^3.9.0" // Use the latest stable version
+    "style-dictionary": "3.9.0" // Use the latest stable version
   }
 }
