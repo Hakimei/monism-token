@@ -1,0 +1,44 @@
+name: Generate Design Tokens
+
+on:
+  push:
+    branches:
+      - main # Or your default branch (e.g., 'master', 'develop')
+    paths:
+      - 'tokens.json' # Trigger only when tokens.json changes
+      - 'style-dictionary.config.json' # And if your config changes
+
+jobs:
+  build_tokens:
+    runs-on: ubuntu-latest # Or your preferred runner environment
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4 # Get your repository code
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20' # Specify the Node.js version required by Style Dictionary
+
+      - name: Install Style Dictionary (or project dependencies if it's in package.json)
+        run: npm install style-dictionary # If Style Dictionary is a direct dependency
+        # Or if it's in your project's package.json:
+        # run: npm ci # This installs all dependencies from package-lock.json
+
+      - name: Build Design Tokens
+        run: npx style-dictionary build # This command executes the build process
+
+      - name: Commit generated files (Optional but common)
+        uses: stefanzweifel/git-auto-commit-action@v5 # Automatically commit changes
+        with:
+          commit_message: '🎨 Build: Update design tokens [skip ci]' # Descriptive commit message
+          file_pattern: |
+            src/styles/_variables.scss
+            src/styles/tokens.css
+            src/ts/tokens.ts
+            # Add all paths to your generated files here
+          # You might need to configure a PAT (Personal Access Token) if default token lacks permissions
+          # github_token: ${{ secrets.GITHUB_TOKEN }} # Default token usually has enough permissions within the repo
+          # This action defaults to using GITHUB_TOKEN, which is often sufficient.
+          # If committing to a protected branch or across repos, you might need a PAT.
