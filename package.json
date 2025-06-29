@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build:tokens": "npx style-dictionary build --config ./config/style-dictionary.config.js",
+    "watch:tokens": "chokidar \"tokens/**/*.json\" -c \"npm run build:tokens\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
@@ -16,6 +17,7 @@
   "author": "Your Name",
   "license": "MIT",
   "devDependencies": {
+    "chokidar-cli": "^3.0.0",
     "style-dictionary": "^5.0.0"
   }
 }
