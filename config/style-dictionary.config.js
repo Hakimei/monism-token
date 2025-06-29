@@ -31,7 +31,9 @@ module.exports = {
       buildPath: 'src/styles/',
       files: [{
         destination: 'tokens.css',
-        format: 'css/variables'
+        format: 'css/variables', // Use built-in format for CSS variables
+        // No custom format for CSS, so output will be:
+        // /** ... */\n:root { ... }
       }]
     },
     scss: {
