@@ -4,9 +4,10 @@
 
 export const ColorPrimary = "#e00c0c";
 export const ColorSecondary = "#480ce0";
-export const ColorTertiary = "#ee890c";
-export const ColorTertiary2 = "#0ccbe0";
+export const ColorSubtle = "#e00c8f";
+export const ColorBackground = "#d9e2e3";
 export const SpacingSmall = "8px";
 export const SpacingBase = "16px";
 export const SpacingLarge = "24px";
-export const SpacingLarge2 = "48px";
+export const SpacingLarge2 = "32px";
+export const SpacingLarge2x = "48px";
