@@ -3,9 +3,10 @@
  */
 
 export const ColorPrimary = "#e00c0c";
-export const ColorSecondary = "#480ce0";
+export const ColorAccent = "#480ce0";
 export const ColorSubtle = "#e00c8f";
 export const ColorBackground = "#d9e2e3";
+export const ColorTest = "#123456";
 export const SpacingSmall = "8px";
 export const SpacingBase = "16px";
 export const SpacingLarge = "24px";
