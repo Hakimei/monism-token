@@ -8,6 +8,9 @@ on:
       - 'tokens/**' # Trigger when any file in the 'tokens' directory changes
       - 'config/style-dictionary.config.js' # Trigger if the config changes
 
+permissions:
+  contents: write
+
 jobs:
   build_and_commit_tokens:
     runs-on: ubuntu-latest
@@ -35,6 +38,9 @@ jobs:
             src/styles/_tokens.scss
             src/styles/tokens.css
             src/ts/tokens.ts
-            src/ts/font-tokens.ts # Include all generated files
+            src/ts/font-tokens.ts
           # No need to set 'github_token' usually, as GITHUB_TOKEN has permissions for current repo
           # This action defaults to using GITHUB_TOKEN, which is often sufficient for committing to the same repo.
+
+# NOTE: If you have branch protection rules that prevent direct pushes to 'main',
+# this workflow will fail to push. In that case, consider using a pull request-based workflow.
