@@ -1,5 +1,5 @@
 {
-  "name": "monism-token",
+  "name": "my-design-tokens",
   "version": "1.0.0",
   "description": "Design tokens generated from Figma",
   "main": "index.js",
@@ -13,7 +13,7 @@
     "figma",
     "style-dictionary"
   ],
-  "author": "Hakimei",
+  "author": "Your Name",
   "license": "MIT",
   "devDependencies": {
     "style-dictionary": "^3.9.0" // Use the latest stable version
