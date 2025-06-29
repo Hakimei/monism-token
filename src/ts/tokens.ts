@@ -2,8 +2,8 @@
  * Do not edit directly, this file was auto-generated.
  */
 
-export const ColorPrimary = "#e00c0c";
-export const ColorAccent = "#480ce0";
+export const ColorMain = "#e00c0c";
+export const ColorColor2 = "#480ce0";
 export const ColorSurface = "#e00c8f";
 export const ColorBackground = "#d9e2e3";
 export const ColorTest = "#123456";
