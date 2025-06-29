@@ -1,0 +1,21 @@
+{
+  "name": "monism-token",
+  "version": "1.0.0",
+  "description": "Design tokens generated from Figma",
+  "main": "index.js",
+  "scripts": {
+    "build:tokens": "npx style-dictionary build --config ./config/style-dictionary.config.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "design",
+    "tokens",
+    "figma",
+    "style-dictionary"
+  ],
+  "author": "Hakimei",
+  "license": "MIT",
+  "devDependencies": {
+    "style-dictionary": "^3.9.0" // Use the latest stable version
+  }
+}
