@@ -1,9 +1,9 @@
-const StyleDictionary = require('style-dictionary');
+const StyleDictionary = require('style-dictionary').default || require('style-dictionary');
 
 // Define a custom format for TypeScript export
 StyleDictionary.registerFormat({
   name: 'typescript/es6-declarations',
-  formatter: function({ dictionary }) {
+  format: function({ dictionary }) {
     return `/**
  * Do not edit directly
  * Generated on ${new Date().toLocaleString()}
