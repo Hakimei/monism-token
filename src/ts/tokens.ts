@@ -2,7 +2,7 @@
  * Do not edit directly, this file was auto-generated.
  */
 
-export const ColorPrimary = "#98f7d9";
+export const ColorPrimary = "#00ff77";
 export const ColorSecondary = "#480ce0";
 export const ColorSurface = "#e00c8f";
 export const ColorBackground = "#d9e2e3";
